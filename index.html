@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rodenchia Weather</title>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter city name.."
+            required
+            class="search-form-input"
+            id="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-app-data">
+          <div>
+            <div class="weather-app-temperature-container">
+              <div id="icon">
+                <img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+                  class="weather-app-icon"
+                />
+              </div>
+              <div class="weather-app-temperature" id="current-temperature">
+                20
+              </div>
+              <div class="weather-app-unit">°C</div>
+            </div>
+
+            <div>
+              <h1 class="weather-app-city" id="city">Uitenhage</h1>
+              <p class="weather-app-details">
+                <span id="time">Wednesday 21:37</span>,
+                <span id="condition">clear sky</span>
+                <br />
+                Humidity:
+                <strong id="humidity">64%</strong>, Wind:
+                <strong id="wind">5.72km/h</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="weather-forecast" id="forecast"></div>
+      </main>
+      <footer>
+        Coded by
+        <a href="https://github.com/Rodenchia" target="_blank">
+          Rodenchia Swarts</a
+        >, is
+        <a href="https://github.com/Rodenchia/Rodenchia" target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and hosted on
+        <a href="https://Rodenchia.netlify.app/" target="_blank">Netlify</a>
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
